@@ -1,4 +1,4 @@
-// export const doThing = thing => ({
-//   type: 'DO_THING',
-//   thing
-// })
+export const setEvents = events => ({
+  type: 'SET_EVENTS',
+  events
+})
