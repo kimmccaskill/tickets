@@ -1,0 +1,22 @@
+.homepage {
+  display: flex;
+  flex-direction: column;
+}
+
+.homepage-top {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 3%;
+}
+
+.homepage-description  {
+  max-width: 50%;
+  padding: 3%;
+  font-size: 1.6em;
+}
+
+.homepage-img {
+  max-width: 40%;
+  max-height: 300px;
+  object-fit: cover;
+}
