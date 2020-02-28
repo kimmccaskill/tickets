@@ -1,4 +1,4 @@
-export const setEvents = events => ({
-  type: 'SET_EVENTS',
-  events
+export const setUpcoming = upcomingEvents => ({
+  type: 'SET_UPCOMING',
+  upcomingEvents
 })
