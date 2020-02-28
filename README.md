@@ -1,68 +1,79 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Tickets Bought Tomorrow - Application for seeing when the best events go on sale
 
-## Available Scripts
+## Solo project by Kim McCaskill, Module 3 at Turing School of Software and Design
 
-In the project directory, you can run:
+### Learning Goals:
 
-### `npm start`
+  - Reinforce React fundamentals
+  - Reinforce using React Router to create a multi-page user experience
+  - Reinforce component and asynchronous JS testing
+  - Work with and navigate a shared, persistent API using GET, POST, and DELETE requests
+  - Implement Redux as the app’s place to store shared state
+  - Test Redux functions
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+#### Wins:
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
 
-### `npm test`
+  
+#### Challenges
+  
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+### Overview of Site:
+Tickets Bought Tomorrow(TBT) is a web application where one can see when the most popular events will start selling tickets.  This application was inspired by trying to find out when Hamilton tickets were going on sale.  It's very difficult to find a central location for these dates and there sparked an idea.  
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### TBT
+#### Homepage:
+<img width="1390" alt="Screen Shot 2020-02-25 at 4 13 08 PM" src="https://user-images.githubusercontent.com/54483332/75296180-b8581c00-57e9-11ea-93b5-021b48720631.png">
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+#### Search:
+<img width="1390" alt="Screen Shot 2020-02-25 at 4 12 41 PM" src="https://user-images.githubusercontent.com/54483332/75296156-a8403c80-57e9-11ea-947b-3fe97740e7e1.png">
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### Current:
+<img width="1390" alt="Screen Shot 2020-02-25 at 4 15 01 PM" src="https://user-images.githubusercontent.com/54483332/75296291-fce3b780-57e9-11ea-99bb-a89f13a64424.png">
 
-### `npm run eject`
+### Technologies Used:
+- Javascript/React
+- Redux
+- HTML/CSS
+- Jest/Enzyme
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Systems/Practices
+- git/Version Control
+- Trello/Project Management
+- Wireframing
+- OOP
+- TDD
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Setup
+Fork then clone down this repository. 
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Then install the library dependencies. Run:
 
-## Learn More
+```
+npm install
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+To verify that it is setup correctly, run `npm start` in your terminal.  This will launch browser with localhost.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## How to View Your Code in Action
 
-### Code Splitting
+In the terminal, run:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+```
+npm start
+```
 
-### Analyzing the Bundle Size
+Browser should open up with localhost:3000
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
 
-### Making a Progressive Web App
+## Running Tests
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+Run your test suite using the command:
 
-### Advanced Configuration
+```
+npm test
+```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+The test results will output to the terminal.
