@@ -1,9 +1,10 @@
 import { combineReducers } from 'redux';
-import { eventsReducer } from './eventsReducer';
-
+import { upcomingEventsReducer } from './upcomingEventsReducer';
+import { currentEventsReducer } from './currentEventsReducer';
 
 const rootReducer = combineReducers({
-  events: eventsReducer,
+  upcomingEvents: upcomingEventsReducer,
+  currentEvents: currentEventsReducer,
 });
 
 export default rootReducer;
