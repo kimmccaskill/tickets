@@ -1,4 +1,4 @@
-# Tickets Bought Tomorrow
+# TicketCloud
 ### Application for seeing when the best events go on sale
 
 ## Solo project by Kim McCaskill, Module 3 at Turing School of Software and Design
