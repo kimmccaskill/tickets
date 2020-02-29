@@ -14,7 +14,6 @@ const EventCard = ({ name,images,sales,dates }) => {
       <h3 className='event-title'>{name}</h3>
       <p>Event Date: {eventDate}</p>
       {checkDate()}
-      {/* <img src={`${images[0].url}`}></img> */}
     </div>
   )
 }
