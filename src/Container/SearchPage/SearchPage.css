@@ -1,0 +1,45 @@
+.search-pg-title {
+  margin: 2em 0 0 2%;
+  padding-left: 1em;
+  border-left: #CAD5CA 5px solid;
+}
+
+.search-form {
+  display: flex;
+  flex-direction: column;
+  width: 31em;
+  margin: 2%;
+  border: 1px lightgrey solid;
+  border-radius: 15px;
+  padding: 3em;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+}
+
+.keyword-input {
+  margin: 15px 0 15px 0;
+  width: 25em;
+  height: 2em;
+  font-size: 16px;
+}
+
+.search-btn {
+  height: 3em;
+  width: 10em;
+  align-self: flex-end;
+}
+
+.input-error {
+  color: red;
+}
+
+.no-results {
+  margin: 2%;
+}
+
+.hidden {
+  display: none;
+}

@@ -7,3 +7,8 @@ export const setCurrent = currentEvents => ({
   type: 'SET_CURRENT',
   currentEvents
 })
+
+export const setSearched = searchedEvents => ({
+  type: 'SET_SEARCHED',
+  searchedEvents
+})

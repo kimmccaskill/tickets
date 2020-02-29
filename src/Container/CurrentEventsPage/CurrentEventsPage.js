@@ -15,13 +15,8 @@ export const CurrentEventsPage = ({currentEvents, setCurrent}) => {
   getEvents()
   const shuffled = currentEvents.sort(() => 0.5 - Math.random());
   let randomEvents = shuffled.slice(0, 5);
-  console.log(randomEvents)
 
-  const randomImgs = randomEvents.map((event, i) => {
-    return (
-      <img className='img-in-header' src={event.images[Math.round(Math.random() * 5)].url} />
-    )
-  })
+  const randomImgs = randomEvents.map((event, i) => <img className='img-in-header' src={event.images[Math.round(Math.random() * 5)].url} />)
 
   return (
     <section>

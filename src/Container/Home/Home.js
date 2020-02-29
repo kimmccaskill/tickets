@@ -7,7 +7,7 @@ import { connect } from 'react-redux';
 
 export const Home = ({ upcomingEvents, setUpcoming }) => {
   getUpcomingEvents()
-      .then(upcomingEvents => setUpcoming(upcomingEvents))
+    .then(upcomingEvents => setUpcoming(upcomingEvents))
 
   return (
     <section className='homepage'>
