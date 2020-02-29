@@ -4,8 +4,8 @@ import moment from 'moment';
 let todaysDate = (moment().format('YYYY-MM-DDTHH:mm:ss') + "Z")
 
 const EventCard = ({ name,images,sales,dates }) => {
-  let eventDate = moment(dates.start.localDate).format('MM-DD-YY')
-  let saleDate = moment(sales.public.startDateTime).format('MM-DD-YY')
+  let eventDate = moment(dates.start.localDate).format('MMMM DD YYYY')
+  let saleDate = moment(sales.public.startDateTime).format('MMMM DD YYYY')
   const checkDate = () => {
     return sales.public.startDateTime > todaysDate ? <p>On Sale on {saleDate}</p> : null
   }
