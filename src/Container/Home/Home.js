@@ -12,10 +12,13 @@ export const Home = ({ upcomingEvents, setUpcoming }) => {
   return (
     <section className='homepage'>
       <div className='homepage-top'>
-        <p className='homepage-description'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+        <div>
+          <p className='homepage-description'>Trying to find out about tickets to your favorite band before anyone else?</p> 
+          <p className='homepage-description'><em>TicketCloud</em> is here for you.</p>
+        </div>
         <img className='homepage-img' alt='Image of concert' src='https://i1.wp.com/weallwantsomeone.org/wp-content/uploads/2019/09/09-28-19_Vulfpeck-MSG76.jpg?fit=600%2C450&ssl=1'></img>
       </div>
-      <h1>What We're Lookin Forward To</h1>
+      <h2 className='homepage-title'>What Coming Up?</h2>
       <EventsContainer events={upcomingEvents}/>
     </section>
   )
