@@ -19,9 +19,9 @@
 - First major API not built by instructors led to unfamiliar documentation and challenges navigating data.
 
 ### Overview of Site:
-Tickets Bought Tomorrow(TBT) is a web application where one can see when the most popular events will start selling tickets.  This application was inspired by trying to find out when Hamilton tickets were going on sale.  It's very difficult to find a central location for these dates and there sparked an idea.  
+TicketCloud(TC) is a web application where one can see when the most popular events will start selling tickets.  This application was inspired by trying to find out when Hamilton tickets were going on sale.  It's very difficult to find a central location for these dates and there sparked an idea!
 
-### TBT
+### TicketCloud
 #### Homepage:
 
 
