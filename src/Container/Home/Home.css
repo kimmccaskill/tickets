@@ -9,14 +9,22 @@
   padding: 3%;
 }
 
+.homepage-title {
+  margin-left: 2%;
+  padding-left: 1em;
+  border-left: #CAD5CA 5px solid;
+}
+
 .homepage-description  {
-  max-width: 50%;
-  padding: 3%;
+  padding: 6% 3% 3% 3%;
   font-size: 1.6em;
+  min-width: 400px;
+  text-align: center;
 }
 
 .homepage-img {
   max-width: 40%;
   max-height: 300px;
   object-fit: cover;
+  box-shadow: 7px 7px 10px -5px rgba(0,0,0,0.75);
 }
