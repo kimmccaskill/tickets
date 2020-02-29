@@ -1,4 +1,5 @@
 import React from 'react'
+import './CurrentEventsPage.css'
 import EventsContainer from '../../Components/EventsContainer/EventsContainer'
 import { connect } from 'react-redux'
 import { setCurrent } from '../../Actions'
@@ -6,16 +7,28 @@ import { getCurrentEvents} from '../../apiCalls'
 
 
 export const CurrentEventsPage = ({currentEvents, setCurrent}) => {
+  
   const getEvents = () => {
     getCurrentEvents()
     .then(currentEvents => setCurrent(currentEvents))
   }
-
   getEvents()
+  const shuffled = currentEvents.sort(() => 0.5 - Math.random());
+  let randomEvents = shuffled.slice(0, 5);
+  console.log(randomEvents)
+
+  const randomImgs = randomEvents.map((event, i) => {
+    return (
+      <img className='img-in-header' src={event.images[Math.round(Math.random() * 5)].url} />
+    )
+  })
 
   return (
     <section>
-      <h1>current events page</h1>
+      <div className='img-header'>
+        {randomImgs}  
+      </div>
+      <h1 className='current-pg-title'>On Sale Now!</h1>
       <EventsContainer events={currentEvents}/>
     </section>
   )
