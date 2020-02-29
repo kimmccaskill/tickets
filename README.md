@@ -13,12 +13,10 @@
   - Test Redux functions
 
 #### Wins:
-
-
+- Successfully diving into TicketMaster API docs to create a helpful app for my own benefit as well as friends.
   
 #### Challenges
-  
-
+- First major API not built by instructors led to unfamiliar documentation and challenges navigating data.
 
 ### Overview of Site:
 Tickets Bought Tomorrow(TBT) is a web application where one can see when the most popular events will start selling tickets.  This application was inspired by trying to find out when Hamilton tickets were going on sale.  It's very difficult to find a central location for these dates and there sparked an idea.  
