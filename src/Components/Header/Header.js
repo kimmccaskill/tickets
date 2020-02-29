@@ -7,7 +7,7 @@ const Header = () => {
     <nav className='nav-bar'>
       <Link to='/' className='logo-box'>
         <div className='logo'></div>
-        <h1>TBT</h1>
+        <h1>TicketCloud</h1>
       </Link>
       <section className='links-container'>
         <NavLink className='nav-btn' to='/about' type='button'>About</NavLink>
