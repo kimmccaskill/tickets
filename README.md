@@ -25,13 +25,13 @@ Tickets Bought Tomorrow(TBT) is a web application where one can see when the mos
 
 ### TBT
 #### Homepage:
-<img width="1390" alt="Screen Shot 2020-02-25 at 4 13 08 PM" src="https://user-images.githubusercontent.com/54483332/75296180-b8581c00-57e9-11ea-93b5-021b48720631.png">
+
 
 #### Search:
-<img width="1390" alt="Screen Shot 2020-02-25 at 4 12 41 PM" src="https://user-images.githubusercontent.com/54483332/75296156-a8403c80-57e9-11ea-947b-3fe97740e7e1.png">
+
 
 #### Current:
-<img width="1390" alt="Screen Shot 2020-02-25 at 4 15 01 PM" src="https://user-images.githubusercontent.com/54483332/75296291-fce3b780-57e9-11ea-99bb-a89f13a64424.png">
+
 
 ### Technologies Used:
 - Javascript/React
