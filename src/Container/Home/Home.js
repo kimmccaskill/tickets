@@ -18,7 +18,7 @@ export const Home = ({ upcomingEvents, setUpcoming }) => {
         </div>
         <img className='homepage-img' alt='Image of concert' src='https://i1.wp.com/weallwantsomeone.org/wp-content/uploads/2019/09/09-28-19_Vulfpeck-MSG76.jpg?fit=600%2C450&ssl=1'></img>
       </div>
-      <h2 className='homepage-title'>What Coming Up?</h2>
+      <h2 className='homepage-title'>What's Coming Up?</h2>
       <EventsContainer events={upcomingEvents}/>
     </section>
   )
