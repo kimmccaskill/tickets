@@ -1,3 +1,7 @@
 .event-card {
   margin: 2%;
 }
+
+.event-title {
+  margin-bottom: 10px;
+}
