@@ -1,6 +1,6 @@
 import React from 'react'
 import './EventsContainer.css'
-import EventCard from '../EventCard/EventCard'
+import EventCard from '../../Container/EventCard/EventCard'
 import { ClipLoader } from "react-spinners";
 
 const EventsContainer = ({ events, loader }) => {
