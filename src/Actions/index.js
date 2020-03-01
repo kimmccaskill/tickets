@@ -12,3 +12,8 @@ export const setSearched = searchedEvents => ({
   type: 'SET_SEARCHED',
   searchedEvents
 })
+
+export const saveEvent = event => ({
+  type: 'SAVE_EVENT',
+  event
+})

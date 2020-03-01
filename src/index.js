@@ -9,7 +9,21 @@ import { createStore } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import rootReducer from './Reducers/index';
 
-const store = createStore(rootReducer, composeWithDevTools());
+const saveToLocalStorage = state => {
+  const serializedState = JSON.stringify(state)
+  localStorage.setItem('state', serializedState)
+}
+
+const loadFromLocalStorage = () => {
+  const serializedState = localStorage.getItem('state')
+  if (serializedState === null) return undefined
+  return JSON.parse(serializedState)
+}
+
+const persistedState = loadFromLocalStorage()
+const store = createStore(rootReducer, persistedState, composeWithDevTools());
+
+store.subscribe(() => saveToLocalStorage(store.getState()))
 
 const router = (
   <Provider store={store} >
