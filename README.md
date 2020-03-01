@@ -14,6 +14,7 @@
 
 #### Wins:
 - Successfully diving into TicketMaster API docs to create a helpful app for my own benefit as well as friends.
+- Having saved events persist through refresh.  Local Storage was an early lesson in my time at Turing but came in handy here!
   
 #### Challenges
 - First major API not built by instructors led to unfamiliar documentation and challenges navigating data.
