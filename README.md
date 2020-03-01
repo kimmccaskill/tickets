@@ -21,6 +21,8 @@
 
 ### Overview of Site:
 TicketCloud(TC) is a web application where one can see when the most popular events will start selling tickets.  This application was inspired by trying to find out when Hamilton tickets were going on sale.  It's very difficult to find a central location for these dates and there sparked an idea!
+TicketMaster API: 
+https://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/
 
 ### TicketCloud
 #### Homepage:
