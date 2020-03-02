@@ -4,9 +4,10 @@ import EventsContainer from '../../Components/EventsContainer/EventsContainer'
 import { connect } from 'react-redux'
 import { setCurrent } from '../../Actions'
 import { getCurrentEvents} from '../../apiCalls/apiCalls'
+import PropTypes from 'prop-types'
 
 export class CurrentEventsPage extends Component {
-  componentDidMount() {
+  componentDidUpdate() {
     const { setCurrent } = this.props
 
     getCurrentEvents()
@@ -38,3 +39,8 @@ export const mapDispatchToProps = dispatch => ({
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(CurrentEventsPage);
+
+CurrentEventsPage.propTypes = {
+  setCurrent: PropTypes.func,
+  currentEvents: PropTypes.array,
+}
