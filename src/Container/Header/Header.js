@@ -3,7 +3,7 @@ import { NavLink, Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import './Header.css'
 
-const Header = ({ savedEvents }) => {
+export const Header = ({ savedEvents }) => {
   return (
     <nav className='nav-bar'>
       <Link to='/' className='logo-box'>
