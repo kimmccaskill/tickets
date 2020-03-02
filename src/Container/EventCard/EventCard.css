@@ -1,14 +1,16 @@
 .event-card {
   margin: 2%;
   width: 50rem;
+  height: 15rem;
   border: 1px solid grey;
-  padding: 1em;
+  /* padding: 1em; */
   display: flex;
   justify-content: space-between;
 }
 
 .event-info {
   color: rgb(31, 30, 30);
+  margin: 2em;
 }
 
 .event-title {
@@ -23,7 +25,9 @@ button {
 }
 
 .event-img {
+  border-left: 1px solid grey;
   width: 40%;
+  height: 14.9rem;
   object-fit: cover;
   box-shadow: 7px 7px 10px -5px rgba(0,0,0,0.45);
 }
