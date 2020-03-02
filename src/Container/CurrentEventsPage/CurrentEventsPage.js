@@ -3,7 +3,7 @@ import './CurrentEventsPage.css'
 import EventsContainer from '../../Components/EventsContainer/EventsContainer'
 import { connect } from 'react-redux'
 import { setCurrent } from '../../Actions'
-import { getCurrentEvents} from '../../apiCalls'
+import { getCurrentEvents} from '../../apiCalls/apiCalls'
 
 
 export const CurrentEventsPage = ({currentEvents, setCurrent}) => {
@@ -16,7 +16,7 @@ export const CurrentEventsPage = ({currentEvents, setCurrent}) => {
   const shuffled = currentEvents.sort(() => 0.5 - Math.random());
   let randomEvents = shuffled.slice(0, 5);
 
-  const randomImgs = randomEvents.map((event, i) => <img className='img-in-header' src={event.images[Math.round(Math.random() * 5)].url} />)
+  const randomImgs = randomEvents.map((event, i) => <img alt={event.name} className='img-in-header' src={event.images[Math.round(Math.random() * 5)].url} />)
 
   return (
     <section>
