@@ -3,7 +3,7 @@ import './SavedPage.css'
 import EventsContainer from '../../Components/EventsContainer/EventsContainer.js'
 import { connect } from 'react-redux';
 
-export const Home = ({ savedEvents }) => {
+export const SavedPage = ({ savedEvents }) => {
   const checkSaved = () => {
     return savedEvents.length > 0 ? <EventsContainer events={savedEvents}/> : <h2 className='error'>There are no saved events.</h2>
   }
@@ -20,4 +20,4 @@ export const mapStateToProps = state => ({
   savedEvents: state.savedEvents
 })
 
-export default connect(mapStateToProps)(Home);
+export default connect(mapStateToProps)(SavedPage);

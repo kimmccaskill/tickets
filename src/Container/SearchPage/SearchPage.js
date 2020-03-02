@@ -3,7 +3,7 @@ import './SearchPage.css'
 import EventsContainer from '../../Components/EventsContainer/EventsContainer'
 import { connect } from 'react-redux'
 import { setSearched } from '../../Actions'
-import { searchEvents} from '../../apiCalls'
+import { searchEvents} from '../../apiCalls/apiCalls'
 
 
 export class SearchPage extends Component { 

@@ -5,7 +5,7 @@ import { saveEvent, unsaveEvent } from '../../Actions'
 import moment from 'moment';
 let todaysDate = (moment().format('YYYY-MM-DDTHH:mm:ss') + "Z")
 
-const EventCard = ({ id, name, sales, dates, images, _embedded, saveEvent, unsaveEvent, savedEvents }) => {
+export const EventCard = ({ id, name, sales, dates, images, _embedded, saveEvent, unsaveEvent, savedEvents }) => {
   let eventDate = moment(dates.start.localDate).format('MMMM DD YYYY')
   let saleDate = moment(sales.public.startDateTime).format('MMMM DD YYYY')
 
