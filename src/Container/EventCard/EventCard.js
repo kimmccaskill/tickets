@@ -17,6 +17,10 @@ const EventCard = ({ id, name, sales, dates, images, _embedded, saveEvent, unsav
     <button onClick={removeFromSaved}>Unsave</button> : <button onClick={submitSave}>Save</button>
   }
 
+  const checkVenue = () => {
+    return _embedded.venues[0].state ? <p>{_embedded.venues[0].city.name}, {_embedded.venues[0].state.stateCode} @ {_embedded.venues[0].name}</p> : undefined
+  }
+
   const submitSave = () => {
     if(savedEvents.find(event => event.name === name && event.dates === dates)) {
       alert(`This event has already been saved.`)
@@ -44,7 +48,7 @@ const EventCard = ({ id, name, sales, dates, images, _embedded, saveEvent, unsav
     <div className='event-card'>
       <div className='event-info'>
         <h3 className='event-title'>{name}</h3>
-        <p>{_embedded.venues[0].city.name}, {_embedded.venues[0].state.stateCode} @ {_embedded.venues[0].name}</p>
+        {checkVenue()}
         <p>Event Date: {eventDate}</p>
         {checkDate()}
         {checkSaved()}
