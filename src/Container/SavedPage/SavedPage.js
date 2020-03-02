@@ -2,6 +2,7 @@ import React from 'react'
 import './SavedPage.css'
 import EventsContainer from '../../Components/EventsContainer/EventsContainer.js'
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types'
 
 export const SavedPage = ({ savedEvents }) => {
   const checkSaved = () => {
@@ -21,3 +22,7 @@ export const mapStateToProps = state => ({
 })
 
 export default connect(mapStateToProps)(SavedPage);
+
+SavedPage.propTypes = {
+  savedEvents: PropTypes.array,
+}

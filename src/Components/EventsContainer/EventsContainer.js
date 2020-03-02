@@ -2,6 +2,7 @@ import React from 'react'
 import './EventsContainer.css'
 import EventCard from '../../Container/EventCard/EventCard'
 import { ClipLoader } from "react-spinners";
+import PropTypes from 'prop-types'
 
 export const EventsContainer = ({ events, loader }) => {
   let listOfCards = events.length ? 
@@ -15,3 +16,8 @@ export const EventsContainer = ({ events, loader }) => {
 }
 
 export default EventsContainer;
+
+EventsContainer.propTypes = {
+  events: PropTypes.array,
+  loader: PropTypes.any,
+}

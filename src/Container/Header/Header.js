@@ -2,6 +2,7 @@ import React from 'react'
 import { NavLink, Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import './Header.css'
+import PropTypes from 'prop-types'
 
 export const Header = ({ savedEvents }) => {
   return (
@@ -25,3 +26,7 @@ export const mapStateToProps = state => ({
 })
 
 export default connect(mapStateToProps)(Header);
+
+Header.propTypes = {
+  savedEvents: PropTypes.array,
+}

@@ -4,7 +4,7 @@ import EventsContainer from '../../Components/EventsContainer/EventsContainer'
 import { connect } from 'react-redux'
 import { setSearched } from '../../Actions'
 import { searchEvents} from '../../apiCalls/apiCalls'
-
+import PropTypes from 'prop-types'
 
 export class SearchPage extends Component { 
   constructor() {
@@ -76,3 +76,8 @@ export const mapDispatchToProps = dispatch => ({
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(SearchPage);
+
+SearchPage.propTypes = {
+  setSearched: PropTypes.func,
+  searchedEvents: PropTypes.array,
+}
