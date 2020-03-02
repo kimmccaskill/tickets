@@ -4,6 +4,7 @@ import EventsContainer from '../../Components/EventsContainer/EventsContainer.js
 import { getUpcomingEvents} from '../../apiCalls/apiCalls'
 import { setUpcoming } from '../../Actions'
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types'
 
 export const Home = ({ upcomingEvents, setUpcoming }) => {
   getUpcomingEvents()
@@ -33,3 +34,8 @@ export const mapDispatchToProps = dispatch => ({
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home);
+
+Home.propTypes = {
+  upcomingEvents: PropTypes,
+  setUpcoming: PropTypes.func,
+}
