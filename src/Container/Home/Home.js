@@ -1,7 +1,7 @@
 import React from 'react'
 import './Home.css'
 import EventsContainer from '../../Components/EventsContainer/EventsContainer.js'
-import { getUpcomingEvents} from '../../apiCalls'
+import { getUpcomingEvents} from '../../apiCalls/apiCalls'
 import { setUpcoming } from '../../Actions'
 import { connect } from 'react-redux';
 
