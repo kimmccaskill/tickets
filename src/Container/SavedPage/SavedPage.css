@@ -4,3 +4,7 @@
   padding-left: 1em;
   border-left: #CAD5CA 5px solid;
 }
+
+.error {
+  margin: 2%;
+}
