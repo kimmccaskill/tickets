@@ -5,7 +5,7 @@ import { saveEvent } from '../../Actions'
 import moment from 'moment';
 let todaysDate = (moment().format('YYYY-MM-DDTHH:mm:ss') + "Z")
 
-const EventCard = ({ name, sales, dates, images, saveEvent, savedEvents }) => {
+const EventCard = ({ name, sales, dates, images, _embedded, saveEvent, savedEvents }) => {
   let eventDate = moment(dates.start.localDate).format('MMMM DD YYYY')
   let saleDate = moment(sales.public.startDateTime).format('MMMM DD YYYY')
 
@@ -27,7 +27,8 @@ const EventCard = ({ name, sales, dates, images, saveEvent, savedEvents }) => {
         saleDate,
         dates,
         sales,
-        images
+        images,
+        _embedded
       })
       //below is temporary
       alert(`${name} has been saved!`)
@@ -37,6 +38,7 @@ const EventCard = ({ name, sales, dates, images, saveEvent, savedEvents }) => {
     <div className='event-card'>
       <div className='event-info'>
         <h3 className='event-title'>{name}</h3>
+        <p>{_embedded.venues[0].city.name}, {_embedded.venues[0].state.stateCode} @ {_embedded.venues[0].name}</p>
         <p>Event Date: {eventDate}</p>
         {checkDate()}
         {checkSaved()}
