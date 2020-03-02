@@ -17,3 +17,8 @@ export const saveEvent = event => ({
   type: 'SAVE_EVENT',
   event
 })
+
+export const unsaveEvent = id => ({
+  type: 'UNSAVE_EVENT',
+  id
+})

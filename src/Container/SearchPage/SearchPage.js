@@ -35,6 +35,7 @@ export class SearchPage extends Component {
     } else {
       this.setState({showError: true})
     }
+    this.setState({keyword: '', showError: false, formFilled: false})
   }
 
   render() {

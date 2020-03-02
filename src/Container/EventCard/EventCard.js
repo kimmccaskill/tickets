@@ -1,11 +1,11 @@
 import React from 'react'
 import './EventCard.css'
 import { connect } from 'react-redux'
-import { saveEvent } from '../../Actions'
+import { saveEvent, unsaveEvent } from '../../Actions'
 import moment from 'moment';
 let todaysDate = (moment().format('YYYY-MM-DDTHH:mm:ss') + "Z")
 
-const EventCard = ({ name, sales, dates, images, _embedded, saveEvent, savedEvents }) => {
+const EventCard = ({ id, name, sales, dates, images, _embedded, saveEvent, unsaveEvent, savedEvents }) => {
   let eventDate = moment(dates.start.localDate).format('MMMM DD YYYY')
   let saleDate = moment(sales.public.startDateTime).format('MMMM DD YYYY')
 
@@ -14,7 +14,11 @@ const EventCard = ({ name, sales, dates, images, _embedded, saveEvent, savedEven
   }
   const checkSaved = () => {
     return savedEvents.find(event => event.name === name && event.dates === dates) ? 
-    <button>Unsave</button> : <button onClick={submitSave}>Save</button>
+    <button onClick={removeFromSaved}>Unsave</button> : <button onClick={submitSave}>Save</button>
+  }
+
+  const checkVenue = () => {
+    return _embedded.venues[0].state ? <p>{_embedded.venues[0].city.name}, {_embedded.venues[0].state.stateCode} @ {_embedded.venues[0].name}</p> : undefined
   }
 
   const submitSave = () => {
@@ -22,6 +26,7 @@ const EventCard = ({ name, sales, dates, images, _embedded, saveEvent, savedEven
       alert(`This event has already been saved.`)
     } else {
       saveEvent({
+        id,
         name,
         eventDate,
         saleDate,
@@ -34,11 +39,16 @@ const EventCard = ({ name, sales, dates, images, _embedded, saveEvent, savedEven
       alert(`${name} has been saved!`)
     }
   }
+
+  const removeFromSaved = () => {
+    unsaveEvent(id)
+  }
+
   return (
     <div className='event-card'>
       <div className='event-info'>
         <h3 className='event-title'>{name}</h3>
-        <p>{_embedded.venues[0].city.name}, {_embedded.venues[0].state.stateCode} @ {_embedded.venues[0].name}</p>
+        {checkVenue()}
         <p>Event Date: {eventDate}</p>
         {checkDate()}
         {checkSaved()}
@@ -53,7 +63,8 @@ export const mapStateToProps = state => ({
 })
 
 export const mapDispatchToProps = (dispatch) => ({
-  saveEvent: (event) => {dispatch(saveEvent(event))}
+  saveEvent: (event) => {dispatch(saveEvent(event))},
+  unsaveEvent: (id) => {dispatch(unsaveEvent(id))}
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(EventCard)
