@@ -1,7 +1,41 @@
 .event-card {
   margin: 2%;
+  width: 50rem;
+  height: 15rem;
+  border: 1px solid grey;
+  /* padding: 1em; */
+  display: flex;
+  justify-content: space-between;
+}
+
+.event-info {
+  display: flex;
+  flex-direction: column;
+  color: rgb(31, 30, 30);
+  margin: 2em;
+  height: 11rem;
 }
 
 .event-title {
   margin-bottom: 10px;
+}
+
+button {
+  align-self: flex-end;
+  cursor: pointer;
+  border: 1px solid gray;
+  padding: 2px;
+  min-width: 40px;
+}
+
+.event-img {
+  border-left: 1px solid grey;
+  width: 40%;
+  height: 14.9rem;
+  object-fit: cover;
+  box-shadow: 7px 7px 10px -5px rgba(0,0,0,0.45);
+}
+
+p {
+  margin-top: .5em;
 }
