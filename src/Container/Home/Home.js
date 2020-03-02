@@ -36,6 +36,6 @@ export const mapDispatchToProps = dispatch => ({
 export default connect(mapStateToProps, mapDispatchToProps)(Home);
 
 Home.propTypes = {
-  upcomingEvents: PropTypes,
+  upcomingEvents: PropTypes.array,
   setUpcoming: PropTypes.func,
 }
