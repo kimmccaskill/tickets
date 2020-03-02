@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
 import './App.css';
-import Header from '../Header/Header'
+import Header from '../../Container/Header/Header'
 import Home from '../../Container/Home/Home'
 import CurrentEventsPage from '../../Container/CurrentEventsPage/CurrentEventsPage'
 import SearchPage from '../../Container/SearchPage/SearchPage'
