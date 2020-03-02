@@ -7,7 +7,7 @@ import { getCurrentEvents} from '../../apiCalls/apiCalls'
 import PropTypes from 'prop-types'
 
 export class CurrentEventsPage extends Component {
-  componentDidUpdate() {
+  componentDidMount() {
     const { setCurrent } = this.props
 
     getCurrentEvents()

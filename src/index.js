@@ -8,6 +8,7 @@ import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import rootReducer from './Reducers/index';
+import { ToastProvider} from 'react-toast-notifications'
 
 const saveToLocalStorage = state => {
   const serializedState = JSON.stringify(state)
@@ -28,7 +29,9 @@ store.subscribe(() => saveToLocalStorage(store.getState()))
 const router = (
   <Provider store={store} >
     <BrowserRouter>
-      <App />
+      <ToastProvider placement='bottom-right'>
+        <App /> 
+      </ToastProvider>
     </BrowserRouter>
   </Provider>
 );

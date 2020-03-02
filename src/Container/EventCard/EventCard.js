@@ -4,11 +4,14 @@ import { connect } from 'react-redux'
 import { saveEvent, unsaveEvent } from '../../Actions'
 import moment from 'moment';
 import PropTypes from 'prop-types'
+import { useToasts } from 'react-toast-notifications'
+
 let todaysDate = (moment().format('YYYY-MM-DDTHH:mm:ss') + "Z")
 
 export const EventCard = ({ id, name, sales, dates, images, _embedded, saveEvent, unsaveEvent, savedEvents }) => {
   let eventDate = moment(dates.start.localDate).format('MMMM DD YYYY')
   let saleDate = moment(sales.public.startDateTime).format('MMMM DD YYYY')
+  const { addToast } = useToasts()
 
   const checkDate = () => {
     return sales.public.startDateTime > todaysDate ? <p>On Sale on {saleDate}</p> : null
@@ -24,7 +27,7 @@ export const EventCard = ({ id, name, sales, dates, images, _embedded, saveEvent
 
   const submitSave = () => {
     if(savedEvents.find(event => event.name === name && event.dates === dates)) {
-      alert(`This event has already been saved.`)
+      addToast('This event has already been saved', { appearance: 'error'})
     } else {
       saveEvent({
         id,
@@ -36,12 +39,12 @@ export const EventCard = ({ id, name, sales, dates, images, _embedded, saveEvent
         images,
         _embedded
       })
-      //below is temporary
-      alert(`${name} has been saved!`)
+      addToast('Saved Successfully', { appearance: 'success'})
     }
   }
 
   const removeFromSaved = () => {
+    addToast('Successfully Removed!', { appearance: 'info'})
     unsaveEvent(id)
   }
 
