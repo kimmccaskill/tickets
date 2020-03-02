@@ -6,17 +6,66 @@ import { setSearched } from '../../Actions';
 
 
 describe('SearchPage', () => {
-  let wrapper,mockState
-  it('should match the snapshot', () => {
+  let wrapper, mockState
+  beforeEach(() => {
     wrapper = shallow(<SearchPage searchedEvents={mockEvents}/>);
-
+  })
+  it('should match the snapshot', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  // test default state
+  it('should start with a default state', () => {
+    expect(wrapper.state('keyword')).toEqual('')
+    expect(wrapper.state('showError')).toEqual(false)
+    expect(wrapper.state('formFilled')).toEqual(false)
+  })
+
+  describe('handleChange', () => {
+    it('should change state of keyword if form is updated', () => {
+      const mockEvent = {
+        preventDefault: jest.fn(),
+        target: {
+          name: 'keyword',
+          value: 'rock'
+        }
+      }
+
+      wrapper.instance().handleChange(mockEvent)
+      expect(wrapper.state('keyword')).toEqual('rock')
+    })
+  })
+
   // getsearchedevents to be called with keyword
-  // handlechange
   // submitform happy and sad path
+  describe('submitForm', () => {
+    it('should run submitForm on click', () => {
+      wrapper.instance().submitForm = jest.fn()
+      const mockEvent = {
+        preventDefault: jest.fn(),
+        target: {
+          name: 'keyword',
+          value: ''
+        }
+      }
+      wrapper.find('.search-btn').simulate('click', mockEvent);
+      wrapper.instance().submitForm(mockEvent)
+      expect(wrapper.instance().submitForm).toHaveBeenCalledWith(mockEvent)
+    })
+
+    it('should run getSearchedEvents on submitForm', () => {
+      wrapper.instance().submitForm = jest.fn().mockImplementation(() => wrapper.instance().getSearchedEvents())
+      wrapper.instance().getSearchedEvents = jest.fn()
+      const mockEvent = {
+        preventDefault: jest.fn(),
+        target: {
+          name: 'keyword',
+          value: ''
+        }
+      }
+      wrapper.instance().submitForm(mockEvent)
+      expect(wrapper.instance().getSearchedEvents).toHaveBeenCalled()
+    })
+  })
   
   describe('mapStateToProps', () => {
     it('should return an object with searchedEvents', () => {
