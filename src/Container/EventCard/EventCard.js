@@ -3,6 +3,7 @@ import './EventCard.css'
 import { connect } from 'react-redux'
 import { saveEvent, unsaveEvent } from '../../Actions'
 import moment from 'moment';
+import PropTypes from 'prop-types'
 let todaysDate = (moment().format('YYYY-MM-DDTHH:mm:ss') + "Z")
 
 export const EventCard = ({ id, name, sales, dates, images, _embedded, saveEvent, unsaveEvent, savedEvents }) => {
@@ -68,3 +69,15 @@ export const mapDispatchToProps = (dispatch) => ({
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(EventCard)
+
+EventCard.propTypes = {
+  id: PropTypes.string,
+  name: PropTypes.string,
+  sales: PropTypes.object,
+  dates: PropTypes.object,
+  images: PropTypes.array,
+  _embedded: PropTypes.object,
+  saveEvent: PropTypes.func,
+  unsaveEvent: PropTypes.func,
+  savedEvents: PropTypes.array
+}
