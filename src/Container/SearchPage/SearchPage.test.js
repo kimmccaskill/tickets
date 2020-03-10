@@ -35,8 +35,6 @@ describe('SearchPage', () => {
     })
   })
 
-  // getsearchedevents to be called with keyword
-  // submitform happy and sad path
   describe('submitForm', () => {
     it('should run submitForm on click', () => {
       wrapper.instance().submitForm = jest.fn()
