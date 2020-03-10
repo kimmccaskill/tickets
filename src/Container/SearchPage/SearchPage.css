@@ -1,7 +1,7 @@
 .search-pg {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: auto;
 }
 
 .search-pg-title {
