@@ -41,7 +41,7 @@ export class SearchPage extends Component {
   render() {
     const {searchedEvents} = this.props
     return (
-      <section>
+      <section className='search-pg'>
         <h1 className='search-pg-title'>Find Your Event</h1>
         <form className='search-form'>
           <label>
