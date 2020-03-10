@@ -10,6 +10,7 @@ export const EventsContainer = ({ events, loader }) => {
   : loader ? <ClipLoader /> : null;
   return (
     <section className='events-container'>
+      <h2 className='homepage-title'>What's Coming Up?</h2>
       {listOfCards}
     </section>
   )
