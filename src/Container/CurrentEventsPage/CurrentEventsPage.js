@@ -20,10 +20,10 @@ export class CurrentEventsPage extends Component {
     const randomImgs = shuffled.map(event => <img alt={event.name} className='img-in-header' src={event.images[2].url} />)
     return (
       <section>
+        <h1 className='current-pg-title'>On Sale Now!</h1>
         <div className='img-header'>
           {randomImgs}  
         </div>
-        <h1 className='current-pg-title'>On Sale Now!</h1>
         <EventsContainer events={currentEvents}/>
       </section>
     )

@@ -1,0 +1,10 @@
+.events-container {
+  width: 50em;
+}
+
+@media screen and (max-width: 900px) {
+  .events-container {
+    width: 100%;
+  }
+}
+

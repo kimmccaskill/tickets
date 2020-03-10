@@ -1,6 +1,7 @@
 .homepage {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .homepage-top {
@@ -10,9 +11,10 @@
 }
 
 .homepage-title {
-  margin-left: 2%;
+  margin: 4% 2% 4% 2%;
   padding-left: 1em;
   border-left: #CAD5CA 5px solid;
+  align-self: flex-start;
 }
 
 .homepage-description  {
@@ -28,4 +30,27 @@
   object-fit: cover;
   box-shadow: 7px 7px 10px -5px rgba(0,0,0,0.75);
   border-radius: 3px;
+}
+
+@media screen and (max-width: 900px) {
+  .homepage {
+    width: 90%;
+  }
+  .homepage-top {
+    flex-direction: column;
+    align-items: center;
+  }
+  .homepage-img {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .homepage-description {
+    min-width: inherit;
+    font-size: 24px;
+  }
+  .long {
+    display: none;
+  }
 }

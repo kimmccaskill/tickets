@@ -11,7 +11,7 @@ export const SavedPage = ({ savedEvents }) => {
 
   return (
     <section className='saved-page'>
-      <h2 className='saved-page-title'>Your Saved Events</h2>
+      <h2 className='saved-page-title'>Saved</h2>
       {checkSaved()}
     </section>
   )
