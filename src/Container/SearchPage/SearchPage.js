@@ -40,6 +40,7 @@ export class SearchPage extends Component {
 
   render() {
     const {searchedEvents} = this.props
+    let searchRec = <p className='search-rec'>Try searching "rock" or "jazz"!</p>
     return (
       <section className='search-pg'>
         <h1 className='search-pg-title'>Find Your Event</h1>
@@ -62,6 +63,7 @@ export class SearchPage extends Component {
         </form>
           <EventsContainer events={searchedEvents}/>
           <h4 className={searchedEvents.length < 1 && this.state.formFilled ? 'no-results' : 'hidden'}>Sorry, but we didn't find any events.  Enter another keyword and try again!</h4>
+          {searchedEvents.length === 0 && searchRec}
       </section>
     )
   }
