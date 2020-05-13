@@ -57,12 +57,6 @@ label {
 }
 
 @media screen and (max-width: 800px) {
-  .search-form {
-    width: 70%;
-  }
-}
-
-@media screen and (max-width: 800px) {
   .keyword-input {
     font-size: .8em;
   }
